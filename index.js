@@ -1,5 +1,5 @@
 let Alexa = require("alexa-app");
-let PerryPediaWiki = require(".perryPediaWiki");
+let PerryPediaWiki = require("./perryPediaWiki");
 
 var perryPedia = new PerryPediaWiki();
 var alexaApp = new Alexa.app();
@@ -26,4 +26,5 @@ alexaApp.intent( "personQueryIntent", {
 );
 
 // connect to lambda
-exports.handler = app.lambda();
+exports.handler = alexaApp.lambda();
+

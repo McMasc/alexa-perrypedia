@@ -1,0 +1,13 @@
+{
+   "intents": [
+      {
+         "intent": "personQueryIntent",
+         "slots": [
+            {
+               "name": "person",
+               "type": "PERSON"
+            }
+         ]
+      }
+   ]
+}
