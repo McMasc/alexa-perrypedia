@@ -1,0 +1,14 @@
+{
+  "name": "alexa-perrypediawiki",
+  "version": "1.0.0",
+  "description": "A aplication to use Alexa to the query Perrypedia Wiki.",
+  "main": "index.js",
+  "author": "Martin Schmidinger <m.schmidinger@mascgroup.com> https://mascgroup.com/",
+  "license": "MIT",
+  "dependencies": {
+    "alexa-app": "^2.4.0",
+    "request": "^2.79.0",
+    "cheerio": "^0.22.0",
+    "html-to-text": "^3.0.0"
+  }
+}
