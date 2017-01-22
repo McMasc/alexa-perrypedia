@@ -17,9 +17,9 @@ function makeAudiable( text ) {
 function createResponse( title, text, uri ) {
   return { 'say' : makeAudiable(text), 
            'card' : { type: "Standard",
-                      title: title,
-                      text: text,
-                      image: { smallImageUrl: "https://mascgroup.com/blog-media/logo.png"} 
+                      title: title + '',
+                      text: text + ''
+                      /*, *image: { smallImageUrl: ""}*/
                     },
            'URI' : uri };
 };

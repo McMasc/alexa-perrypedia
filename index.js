@@ -14,8 +14,9 @@ alexaApp.pre = function(request, response, type) {
 
 // Alexa, starte Grossrechner Nathan ...
 alexaApp.launch( function(request, response) {
-  response.say( "Willkommen Terraner! Ich bin NATHAN der lunare Großrechner der Menschheit. \
-                Stelle mir eine Frage. z.B. Alexa, frage " + appName + " wer ist Perry Rhodan?").send();
+  response.say( "<p>Willkommen Terraner!</p> \
+                <p>Ich bin verbunden mit NATHAN dem lunaren Großrechner der Menschheit.</p> \
+                <p>Stelle mir eine Frage. z.B. Alexa, frage " + appName + " wer ist Perry Rhodan?</p>").send();
   return false;
 });
 

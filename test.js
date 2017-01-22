@@ -2,7 +2,7 @@ var PerryPediaWiki = require("./perryPediaWiki");
 var perryPedia = new PerryPediaWiki();
 
 function debug(error, wikiResponse) {
-       console.log("\n" + "-".repeat(140));
+      console.log("\n" + "-".repeat(140));
       if (!error) {
         console.log(wikiResponse.say);
         console.log(wikiResponse.card);
@@ -11,8 +11,10 @@ function debug(error, wikiResponse) {
       }
 }
 
-perryPedia.queryRealPersonInfo( 'Perry Rhodan', debug ); 
-perryPedia.queryRealPersonInfo( 'Bully', debug ); 
-perryPedia.queryRealPersonInfo( 'Icho Tolot', debug ); 
-perryPedia.queryRealPersonInfo( 'Ronald Tekener', debug ); 
-perryPedia.queryRealPersonInfo( 'Farye Sepheroa', debug ); 
+var testPersons = ['Perry Rhodan', 'Bully', 'Icho Tolot', 'Ronald Tekener', 'Farye Sepheroa'];
+
+for (var index = 0; index < testPersons.length; index++) {
+    person = testPersons[index];
+    perryPedia.queryRealPersonInfo( person, debug ); 
+    perryPedia.queryRealPersonAppearance( person, debug ); 
+}
