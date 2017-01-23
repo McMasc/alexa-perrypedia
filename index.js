@@ -36,38 +36,16 @@ alexaApp.intent( "personInfoIntent", {
       "Wer ist {-|person}"
     ]
   }, function(request, response) {
-    var person = request.slot("person");
+    var person = request.slot( "person" );
     perryPedia.queryRealPersonInfo( person, function(error, wikiResponse) {
       if (!error) {
         response.say(wikiResponse.say);
         response.card(wikiResponse.card);
         response.send();
       } else {
-        response.fail("Entschuldigung, das weiß ich jetzt gerade nicht.");
+        response.fail( "Entschuldigung, dass weiß ich gerade nicht." );
       }
     } );
-    return false;
-  }
-);
-
-alexaApp.intent( "personAppearanceIntent", {
-    "slots": {
-      "person": "REAL_PERSON"
-    },
-    "utterances": [
-      "Wie schaut {-|REAL_PERSON} aus"
-    ]
-  }, function(request, response) {
-    var person = request.slot("person");
-    perryPedia.queryRealPersonAppearance( person, function(error, wikiResponse) {
-      if (!error) {
-        response.say(wikiResponse.say);
-        response.card(wikiResponse.card);
-        response.send();
-      } else {
-        response.fail("Entschuldigung, das weiß ich jetzt gerade nicht.");
-      }
-    });
     return false;
   }
 );
